@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Study Website - Northwest Corner Method</title>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="Guides.css">
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <header class="Navbar"> 
+    <ul class="navbarcontent">
+      <li class="Logo">
+        <img src="Assets/Logo.jpg" alt="Study Website Logo" style="height: 50px; width: 50px; border-radius: 25px;">
+      </li>
+      <li class="navcontent"><a href="Study_Guide.html">Home</a></li>
+      <li class="navcontent"><a href="Guides.html">Guides</a></li>
+      <li class="navcontent"><a href="#">Sources</a></li>
+      <li class="navcontent"><a href="#">FAQ</a></li>
+    </ul>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container">
+    <h1>Northwest Corner Method</h1>
+    
+    <!-- Input Table -->
+    <section>
+      <h2>Input Data</h2>
+      <table id="supplyDemandTable">
+        <thead>
+          <tr>
+            <th>F/W</th>
+            <th>1</th>
+            <th>2</th>
+            <th>3</th>
+            <th>4</th>
+            <th>Supply</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>A</th>
+            <td><input type="number" class="cost" data-row="0" data-col="0" aria-label="Cost for A1"></td>
+            <td><input type="number" class="cost" data-row="0" data-col="1" aria-label="Cost for A2"></td>
+            <td><input type="number" class="cost" data-row="0" data-col="2" aria-label="Cost for A3"></td>
+            <td><input type="number" class="cost" data-row="0" data-col="3" aria-label="Cost for A4"></td>
+            <td><input type="number" class="supply" data-row="0" aria-label="Supply for A"></td>
+          </tr>
+          <tr>
+            <th>B</th>
+            <td><input type="number" class="cost" data-row="1" data-col="0" aria-label="Cost for B1"></td>
+            <td><input type="number" class="cost" data-row="1" data-col="1" aria-label="Cost for B2"></td>
+            <td><input type="number" class="cost" data-row="1" data-col="2" aria-label="Cost for B3"></td>
+            <td><input type="number" class="cost" data-row="1" data-col="3" aria-label="Cost for B4"></td>
+            <td><input type="number" class="supply" data-row="1" aria-label="Supply for B"></td>
+          </tr>
+          <tr>
+            <th>C</th>
+            <td><input type="number" class="cost" data-row="2" data-col="0" aria-label="Cost for C1"></td>
+            <td><input type="number" class="cost" data-row="2" data-col="1" aria-label="Cost for C2"></td>
+            <td><input type="number" class="cost" data-row="2" data-col="2" aria-label="Cost for C3"></td>
+            <td><input type="number" class="cost" data-row="2" data-col="3" aria-label="Cost for C4"></td>
+            <td><input type="number" class="supply" data-row="2" aria-label="Supply for C"></td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <th>Demand</th>
+            <td><input type="number" class="demand" data-col="0" aria-label="Demand for 1"></td>
+            <td><input type="number" class="demand" data-col="1" aria-label="Demand for 2"></td>
+            <td><input type="number" class="demand" data-col="2" aria-label="Demand for 3"></td>
+            <td><input type="number" class="demand" data-col="3" aria-label="Demand for 4"></td>
+            <td></td>
+          </tr>
+        </tfoot>
+      </table>
+    </section>
+
+    <!-- Action Buttons -->
+    <div class="action-buttons">
+      <button id="computePlan">Compute Plan</button>
+      <button id="computeCost">Compute Cost</button>
+      <button id="computeOptimalPlan">Compute Optimal Plan</button>
+    </div>
+
+    <!-- Results Section -->
+    <section>
+      <h2>Results</h2>
+      <p>Total Supply: <span id="totalSupply">0</span></p>
+      <p>Total Demand: <span id="totalDemand">0</span></p>
+      <p>Total Cost: <span id="totalCost">0</span></p>
+    </section>
+
+    <!-- Optimal Plan Table -->
+    <section>
+      <h2>Optimal Transportation Plan</h2>
+      <table id="optimalPlanTable">
+        <thead>
+          <tr>
+            <th>F/W</th>
+            <th>1</th>
+            <th>2</th>
+            <th>3</th>
+            <th>4</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>A</th>
+            <td id="optimal-plan-0-0"></td>
+            <td id="optimal-plan-0-1"></td>
+            <td id="optimal-plan-0-2"></td>
+            <td id="optimal-plan-0-3"></td>
+          </tr>
+          <tr>
+            <th>B</th>
+            <td id="optimal-plan-1-0"></td>
+            <td id="optimal-plan-1-1"></td>
+            <td id="optimal-plan-1-2"></td>
+            <td id="optimal-plan-1-3"></td>
+          </tr>
+          <tr>
+            <th>C</th>
+            <td id="optimal-plan-2-0"></td>
+            <td id="optimal-plan-2-1"></td>
+            <td id="optimal-plan-2-2"></td>
+            <td id="optimal-plan-2-3"></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <script src="Guides.js"></script>
+</body>
+</html>

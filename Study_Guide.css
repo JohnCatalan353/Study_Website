@@ -1,0 +1,99 @@
+/* Ensure full height for body and html */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                url('Assets/Study_Girl.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+}
+
+/* Navbar styling */
+.navbarcontent {
+    list-style-type: none;
+    font-family: 'Rubik', sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)); 
+    padding: 0; /* Remove padding to eliminate gap */
+    margin: 0; /* Remove any margin if present */
+}
+
+.Logo {
+    width: 30px;  
+    height: 60px;
+    margin-left: 25px;
+    border-radius: 15px; 
+    align-items: start;
+}
+
+.navcontent {
+    display: flex;
+    justify-content: space-between; 
+    width: 30%;  
+    padding: 50px;
+}
+
+.navcontent li {
+    cursor: pointer;
+}
+
+.navcontent li a {
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+    margin: 20px;
+    border-radius: 25px;
+    transition: color 0.4s ease;
+    transition: background-color 0.5s ease;
+}
+
+.navcontent li a:hover {
+    color: black;
+    background-color: white;
+}
+
+.bigtext {
+    font-size: 105px;
+}
+
+.smalltext {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.containers {
+    display: flex;         
+    justify-content: space-between; 
+    gap: 25%;
+    padding-top: 20px;
+}
+
+.box {
+    width: 100%;  
+    margin-top: 50px;     
+    padding-left: 50px;
+    padding-right: 50px;
+    color: white;
+    font-family: 'Rubik', sans-serif;
+    font-size: 40px;
+}
+
+.box1 {
+    padding-right: 50px;
+    padding-top: 50px;
+}
+
+.Row2 {
+    background-color: white;
+    width: 500px;
+    height: 350px;
+}
